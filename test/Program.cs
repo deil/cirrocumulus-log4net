@@ -2,6 +2,8 @@ using System;
 using log4net.Config;
 using log4net;
 using System.IO;
+using System.ServiceModel;
+using Cirrocumulus;
 
 namespace test
 {

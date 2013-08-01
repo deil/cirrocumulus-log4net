@@ -35,6 +35,7 @@
     <Reference Include="log4net">
       <HintPath>..\lib\log4net-1.2.11\net\4.0\release\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />

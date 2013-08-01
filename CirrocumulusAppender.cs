@@ -14,11 +14,12 @@ namespace Cirrocumulus
 
         public void DoAppend(LoggingEvent loggingEvent)
         {
-            return;
+            EventsQueue.Instance.Enqueue(loggingEvent);
         }
 
         public void Close()
         {
+            EventsQueue.Instance.Close();
         }
     }
 }

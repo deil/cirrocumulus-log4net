@@ -35,11 +35,15 @@
     <Reference Include="log4net">
       <HintPath>lib\log4net-1.2.11\net\4.0\release\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="CirrocumulusAppender.cs" />
-    <Compile Include="Core\EventsQueue.cs" />
+    <Compile Include="ICollectorService.cs" />
+    <Compile Include="EventsQueue.cs">
+      <DependentUpon>AssemblyInfo.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
