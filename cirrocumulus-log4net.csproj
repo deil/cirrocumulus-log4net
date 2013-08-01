@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2130B39B-1AB6-4EE9-99F3-38AFD88F91FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Cirrocumulus</RootNamespace>
+    <AssemblyName>cirrocumulus-log4net</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="log4net">
+      <HintPath>lib\log4net-1.2.11\net\4.0\release\log4net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CirrocumulusAppender.cs" />
+    <Compile Include="Core\EventsQueue.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="lib\" />
+    <Folder Include="Core\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\log4net-1.2.11\cli\1.0\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\cli\1.0\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\mono\1.0\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\mono\1.0\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\mono\2.0\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\mono\2.0\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\net\1.0\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\net\1.0\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\net\1.1\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\net\1.1\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\net\2.0\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\net\2.0\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\net\3.5\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\net\3.5\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\net\4.0\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\net\4.0\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\net-cp\3.5\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\net-cp\3.5\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\net-cp\4.0\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\net-cp\4.0\release\log4net.xml" />
+    <None Include="lib\log4net-1.2.11\netcf\2.0\release\log4net.dll" />
+    <None Include="lib\log4net-1.2.11\netcf\2.0\release\log4net.xml" />
+  </ItemGroup>
+</Project>
